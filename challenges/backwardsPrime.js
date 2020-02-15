@@ -17,12 +17,12 @@ function backwardsPrime(start, stop) {
     }
     return result;
   };
+
   let retArr=[];
-  for (j=start; j<(stop);j++){
+  for (let j=start; j<=(stop);j++){
     let rev=Number(j.toString().split("").reverse().join(""));
     if (isItPrime(j) && j != rev && isItPrime(rev)) retArr.push(j);
   }
   return retArr;
 }
-
 module.exports = backwardsPrime;
